@@ -1,0 +1,31 @@
+.pickdrop-wrapper {
+  background: #f6f7f9;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.box h4 {
+  margin-bottom: 16px;
+}
+
+.fields {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fields div {
+  flex: 1;
+}
+
+label {
+  font-size: 12px;
+  color: #90a3bf;
+}
