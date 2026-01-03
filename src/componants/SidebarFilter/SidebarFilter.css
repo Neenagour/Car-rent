@@ -1,0 +1,121 @@
+/* MAIN LAYOUT */
+.details-layout {
+  display: flex;
+  background: #f6f7f9;
+}
+
+/* RIGHT CONTENT */
+.details-content {
+  margin-left: 300px;   /* sidebar width */
+  padding: 30px;
+  width: 100%;
+}
+
+/* TOP */
+.details-top {
+  display: flex;
+  gap: 30px;
+}
+
+/* LEFT BLUE */
+.details-left {
+  flex: 1;
+  background: linear-gradient(135deg, #3563e9, #6c8cff);
+  color: #fff;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.left-desc {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.main-car-img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.thumbs {
+  display: flex;
+  gap: 12px;
+}
+
+.thumbs img {
+  width: 90px;
+  background: #fff;
+  padding: 6px;
+  border-radius: 10px;
+}
+
+/* RIGHT INFO */
+.details-right {
+  flex: 1;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-row {
+  color: #90a3bf;
+  font-size: 14px;
+}
+
+.desc {
+  margin: 15px 0;
+  color: #596780;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.specs span {
+  font-weight: 600;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #90a3bf;
+  font-size: 14px;
+}
+
+/* REVIEWS */
+.reviews {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+.count {
+  background: #3563e9;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* RECOMMEND */
+.recommend {
+  margin-top: 50px;
+}
+
+.recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}

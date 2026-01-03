@@ -1,0 +1,48 @@
+.hero-card {
+  height: auto;
+  min-height: 180px;     /* 👈 aur compact */
+  border-radius: 14px;
+  padding: 20px;         /* 👈 tight spacing */
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Backgrounds */
+.hero-card.blue {
+  background: #5b9cff;
+}
+
+.hero-card.dark {
+  background: #3563e9;
+}
+
+/* IMAGE */
+.hero-card img {
+  width: 180px;          /* 👈 chhota */
+  max-width: 38%;
+  height: auto;
+
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+
+  object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-card {
+    min-height: 160px;
+  }
+
+  .hero-card img {
+    width: 140px;
+    max-width: 55%;
+  }
+}
