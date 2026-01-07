@@ -1,0 +1,17 @@
+@media (max-width: 768px) {
+  .ant-layout-footer {
+    padding: 20px !important;
+  }
+
+  .ant-layout-footer h4 {
+    margin-top: 16px;
+  }
+
+  .ant-layout-footer p {
+    font-size: 13px;
+  }
+
+  .ant-layout-footer .ant-row {
+    text-align: left;
+  }
+}
