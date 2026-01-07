@@ -1,4 +1,5 @@
 import { Layout, Row, Col } from 'antd';
+import"./Footer.css";
 
 const { Footer } = Layout;
 

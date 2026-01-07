@@ -3,25 +3,38 @@
   background: #f6f7f9;
 }
 
-.details-content {
+
+/* .details-content {
   margin-left: -145px;
   padding: 30px;
   width: 100%;
+} */
+ .details-content {
+  flex: 1;              /* 👈 MAGIC */
+  padding: 30px 40px;
 }
+
 
 /* TOP */
 .details-top {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1.4fr 1fr; /* thoda aur wide blue card */
+  gap: 32px;
 }
+
+.details-right {
+ min-height: 280px;   /* 👈 height kam */
+  padding: 20px;
+}
+
 
 /* LEFT BLUE */
 .details-left {
   background: linear-gradient(135deg, #3563e9, #6c8cff);
   color: #fff;
-  padding: 25px;
+  padding: 20px;        /* 👈 kam padding */
   border-radius: 16px;
+  min-height: 280px;    /* 👈 same height as right */
 }
 
 .left-desc {
@@ -31,7 +44,9 @@
 
 .main-car-img {
   width: 100%;
-  margin: 20px 0;
+  max-height: 160px;   /* 👈 image ko limit */
+  object-fit: contain;
+  margin: 16px 0;
 }
 
 .thumbs {
@@ -40,8 +55,8 @@
 }
 
 .thumbs img {
-  width: 90px;
-  padding: 6px;
+  width: 70px;
+  padding: 5px;
   background: #fff;
   border-radius: 10px;
 }
@@ -128,3 +143,34 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
+
+/* ================= MOBILE VIEW ================= */
+/* ================= MOBILE ORDER FIX ================= */
+@media (max-width: 768px) {
+
+  /* TOP section column me */
+  .details-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* 🔵 BLUE CARD → FIRST */
+  .details-left {
+    order: 1;
+  }
+
+  /* ⚪ DETAILS CARD → SECOND */
+  .details-right {
+    order: 2;
+  }
+
+  /* ⭐ REVIEWS → THIRD */
+  .reviews {
+    order: 3;
+    margin-top: 20px;
+  }
+
+}
+
+

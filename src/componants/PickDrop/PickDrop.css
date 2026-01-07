@@ -1,31 +1,96 @@
+/* =========================
+   PICK DROP WRAPPER
+========================= */
 .pickdrop-wrapper {
+  width: 100%;
   background: #f6f7f9;
   padding: 24px;
-  border-radius: 12px;
-  margin-bottom: 40px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
 }
 
+/* =========================
+   WHITE BOX (Pick / Drop)
+========================= */
 .box {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
+  width: 100%;
 }
 
 .box h4 {
   margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
+/* =========================
+   FIELDS
+========================= */
 .fields {
   display: flex;
-  justify-content: space-between;
   gap: 16px;
 }
 
 .fields div {
   flex: 1;
+  min-width: 0; /* 🔥 MOST IMPORTANT FIX */
 }
 
 label {
+  display: block;
   font-size: 12px;
   color: #90a3bf;
+  margin-bottom: 6px;
+}
+
+/* AntD select full width */
+.ant-select {
+  width: 100%;
+}
+
+/* =========================
+   SWAP BUTTON
+========================= */
+.swap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   (SECOND SCREENSHOT JESA)
+========================= */
+@media (max-width: 768px) {
+
+  .pickdrop-wrapper {
+    padding: 16px;
+  }
+
+  .fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .box {
+    padding: 16px;
+  }
+
+  .box h4 {
+    font-size: 14px;
+  }
+
+  .ant-select-selector {
+    font-size: 12px;
+    height: 34px !important;
+  }
+
+  /* swap icon center & rotated */
+  .swap button {
+    transform: rotate(90deg);
+  }
 }

@@ -1,0 +1,87 @@
+/* =========================
+   EXACT SEARCH BOX (LEFT 🔍 + RIGHT 🎚)
+========================= */
+
+/* Wrapper */
+.ant-input-search {
+  max-width: 440px;
+  width: 100%;
+}
+
+/* Capsule shape */
+.ant-input-search .ant-input-group {
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Input field */
+.ant-input-search .ant-input {
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding-left: 42px;   /* left search icon space */
+  padding-right: 56px;  /* right filter icon space */
+  font-size: 14px;
+  color: #374151;
+  background: #fff;
+}
+
+/* Remove blue focus */
+.ant-input-search .ant-input:focus {
+  box-shadow: none;
+  border-color: #e5e7eb;
+}
+
+/* LEFT search icon */
+.ant-input-search .ant-input-prefix {
+  position: absolute;
+  left: 14px;
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+/* RIGHT button wrapper */
+.ant-input-search .ant-input-group-addon {
+  background: transparent;
+  border: none;
+}
+
+/* RIGHT round icon button */
+.ant-input-search .ant-btn {
+  height: 36px;
+  width: 36px;
+  margin-right: 6px;
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* ❌ Hide default search icon */
+.ant-input-search .ant-btn .anticon-search {
+  display: none;
+}
+
+/* ✅ ADD filter/list icon using CSS */
+.ant-input-search .ant-btn::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M6 12h12M10 18h4' /%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: 18px;
+}
+
+/* Hover effect */
+.ant-input-search .ant-btn:hover {
+  background: #f9fafb;
+}
+@media (max-width: 768px) {
+  .ant-input-search {
+    max-width: 100%;
+  }
+}

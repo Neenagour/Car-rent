@@ -1,121 +1,54 @@
-/* MAIN LAYOUT */
-.details-layout {
-  display: flex;
-  background: #f6f7f9;
-}
+.sidebar-filter {
+  width: 280px;
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 24px;
+  border-right: 1px solid #e6e9f0;
 
-/* RIGHT CONTENT */
-.details-content {
-  margin-left: 300px;   /* sidebar width */
-  padding: 30px;
-  width: 100%;
+  /* optional but recommended */
+  position: sticky;
+  top: 0;
 }
-
-/* TOP */
-.details-top {
-  display: flex;
-  gap: 30px;
-}
-
-/* LEFT BLUE */
-.details-left {
-  flex: 1;
-  background: linear-gradient(135deg, #3563e9, #6c8cff);
-  color: #fff;
-  padding: 25px;
-  border-radius: 16px;
-}
-
-.left-desc {
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-.main-car-img {
-  width: 100%;
-  margin: 20px 0;
-}
-
-.thumbs {
-  display: flex;
-  gap: 12px;
-}
-
-.thumbs img {
-  width: 90px;
+.sidebar-filter {
+  width: 280px;
+  flex-shrink: 0;
   background: #fff;
-  padding: 6px;
-  border-radius: 10px;
 }
 
-/* RIGHT INFO */
-.details-right {
-  flex: 1;
-  background: #fff;
-  padding: 25px;
-  border-radius: 16px;
-}
 
-.title-row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.rating-row {
+/* Section title */
+.filter-title {
+  font-size: 12px;
+  font-weight: 600;
   color: #90a3bf;
-  font-size: 14px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
-.desc {
-  margin: 15px 0;
+/* Checkbox group */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+/* Ant checkbox text */
+.ant-checkbox-wrapper {
+  font-size: 14px;
   color: #596780;
 }
 
-.specs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.specs span {
-  font-weight: 600;
-}
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.old-price {
-  text-decoration: line-through;
-  color: #90a3bf;
+/* Price text */
+.price-text {
   font-size: 14px;
+  color: #596780;
+  margin-top: 10px;
 }
 
-/* REVIEWS */
-.reviews {
-  background: #fff;
-  padding: 25px;
-  border-radius: 16px;
-  margin-top: 40px;
+@media (max-width: 768px) {
+  .sidebar-filter {
+    display: none;
+  }
 }
 
-.count {
-  background: #3563e9;
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-}
-
-/* RECOMMEND */
-.recommend {
-  margin-top: 50px;
-}
-
-.recommend-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}

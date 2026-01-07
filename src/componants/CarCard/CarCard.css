@@ -81,3 +81,44 @@
 .rent-btn:hover {
   background: #274bcc;
 }
+/* =========================
+   MOBILE VIEW (<=768px)
+========================= */
+@media (max-width: 768px) {
+  .car-card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .card-top {
+    align-items: center;
+  }
+
+  .car-name {
+    font-size: 14px;
+  }
+
+  .car-type {
+    font-size: 11px;
+  }
+
+  .car-img {
+    height: 90px;        /* 👈 screenshot jaisi height */
+    margin: 12px 0;
+  }
+
+  .car-info {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .rent-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+

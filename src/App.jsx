@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Cars from "./pages/Cars";
 import Login from "./pages/Login";
 import CarDetails from "./pages/CarDetails";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cars" element={<Cars />} />
            <Route path="/cars/:id" element={<CarDetails />} />
+           <Route path="/checkout/:id" element={<Checkout />} />
+
         </Route>
 
         {/* AUTH PAGES */}

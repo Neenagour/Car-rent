@@ -35,14 +35,8 @@
   object-fit: contain;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
-  .hero-card {
-    min-height: 160px;
-  }
-
-  .hero-card img {
-    width: 140px;
-    max-width: 55%;
+  .hero-card.dark {
+    display: none;
   }
 }
