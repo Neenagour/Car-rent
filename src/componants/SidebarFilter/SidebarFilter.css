@@ -26,6 +26,12 @@
 }
 
 /* Checkbox group */
+/* sidebar base font */
+.sidebar-filter {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* checkbox group */
 .filter-group {
   display: flex;
   flex-direction: column;
@@ -33,18 +39,31 @@
   margin-bottom: 28px;
 }
 
-/* Ant checkbox text */
+/* checkbox text */
 .ant-checkbox-wrapper {
   font-size: 14px;
   color: #596780;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-/* Price text */
+/* section title */
+.filter-title {
+  font-size: 14px;
+  font-weight: 300;
+  color: #a4a5a7;
+  margin-bottom: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* price text */
 .price-text {
   font-size: 14px;
   color: #596780;
   margin-top: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
 }
+
 
 @media (max-width: 768px) {
   .sidebar-filter {

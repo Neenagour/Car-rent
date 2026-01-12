@@ -1,0 +1,35 @@
+/* main content wrapper */
+.home-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+/* popular cars section spacing */
+.popular-cars {
+  margin-top: 32px;
+}
+
+/* show more button wrapper */
+.show-more-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  margin: 28px 0;
+}
+
+/* Right side text */
+.car-count {
+  position: absolute;
+  right: 0;                
+  font-size: 13px;
+  color: #90a3bf;
+}
+
+@media (max-width: 768px) {
+  .show-more-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

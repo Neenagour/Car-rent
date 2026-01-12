@@ -3,6 +3,11 @@ import { HeartOutlined, HeartFilled } from "@ant-design/icons";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import gasIcon from "../../assets/gas-station.png";
+
+import gearIcon from "../../assets/Car .png";
+import peopleIcon from "../../assets/profile-2user.png";
+
 const CarCard = ({ id, name, type, image, price }) => {
   const [fav, setFav] = useState(false);
   const navigate = useNavigate();
@@ -15,21 +20,36 @@ const CarCard = ({ id, name, type, image, price }) => {
           <h4 className="car-name">{name}</h4>
           <p className="car-type">{type}</p>
         </div>
+        <span
+  className={`fav-icon ${fav ? "active" : ""}`}
+  onClick={() => setFav(!fav)}
+>
+  {fav ? <HeartFilled /> : <HeartOutlined />}
+</span>
 
-        <span className="fav-icon" onClick={() => setFav(!fav)}>
-          {fav ? <HeartFilled style={{ color: "red" }} /> : <HeartOutlined />}
-        </span>
       </div>
 
       {/* IMAGE */}
       <img src={image} alt={name} className="car-img" />
 
       {/* FEATURES */}
-      <div className="car-info">
-        <span>⛽ 80L</span>
-        <span>⚙ Manual</span>
-        <span>👤 2 People</span>
-      </div>
+     <div className="car-info">
+  <span>
+    <img src={gasIcon} alt="fuel" className="info-icon" />
+    80L
+  </span>
+
+  <span>
+    <img src={gearIcon} alt="gear" className="info-icon" />
+    Manual
+  </span>
+
+  <span>
+    <img src={peopleIcon} alt="people" className="info-icon" />
+    2 People
+  </span>
+</div>
+
 
       {/* BOTTOM */}
       <div className="card-bottom">
@@ -38,10 +58,7 @@ const CarCard = ({ id, name, type, image, price }) => {
           <span className="per-day">/ day</span>
         </div>
 
-        <button
-          className="rent-btn"
-          onClick={() => navigate(`/cars/${id}`)}
-        >
+        <button className="rent-btn" onClick={() => navigate(`/cars/${id}`)}>
           Rent Now
         </button>
       </div>

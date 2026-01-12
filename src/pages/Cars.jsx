@@ -4,12 +4,14 @@ import CarCard from "../componants/CarCard/CarCard";
 import PickDrop from "../componants/PickDrop/PickDrop";
 import { carsData } from "../data/carsData";
 import { useState } from "react";
+import "./Cars.css";
 
 const Cars = () => {
   const [visibleCount, setVisibleCount] = useState(9);
 
   return (
-    <div style={{ maxWidth: 1400, margin: "0 auto", padding: "14px 20px 24px" }}>
+    <div className="cars-wrapper">
+
       <Row gutter={24}>
         
         {/* LEFT SIDEBAR */}
@@ -20,7 +22,7 @@ const Cars = () => {
         {/* RIGHT CONTENT */}
         <Col xs={24} md={18}>
 
-          {/* ✅ PICK & DROP (PAGE-1 jesa) */}
+          {/* PICK & DROP */}
           <PickDrop />
 
           {/* CAR CARDS */}
@@ -34,13 +36,16 @@ const Cars = () => {
 
           {/* SHOW MORE */}
           {visibleCount < carsData.length && (
-            <div style={{ textAlign: "center", marginTop: 32 }}>
+           <div className="show-more-wrapper">
+
               <Button
                 type="primary"
                 onClick={() => setVisibleCount(prev => prev + 6)}
               >
                 Show More Cars
               </Button>
+
+              <span className="car-count">120 Car</span>
             </div>
           )}
 

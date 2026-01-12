@@ -1,0 +1,57 @@
+.dashboard {
+  display: flex;
+  background: #f6f7f9;
+}
+
+.content {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  width: 100%;
+}
+
+.right-panel {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*  DASHBOARD - MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Sidebar */
+  .dashboard > .sidebar {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 24px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* DetailsRental full width */
+  .content > div:first-child {
+    width: 100%;
+  }
+
+  /* Right panel  */
+  .right-panel {
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Cards full width */
+  .right-panel > * {
+    width: 100%;
+  }
+}

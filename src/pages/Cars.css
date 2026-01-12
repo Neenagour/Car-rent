@@ -1,0 +1,12 @@
+/* main wrapper */
+.cars-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 0px 0px;
+}
+
+/* show more button wrapper */
+.show-more-wrapper {
+  text-align: center;
+  margin-top: 32px;
+}

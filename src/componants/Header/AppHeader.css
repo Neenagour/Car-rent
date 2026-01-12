@@ -1,87 +1,160 @@
-/* =========================
-   EXACT SEARCH BOX (LEFT 🔍 + RIGHT 🎚)
-========================= */
 
-/* Wrapper */
-.ant-input-search {
-  max-width: 440px;
+.site-header {
+  background: #fff;
+  padding: 0;
+  height: 72px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  margin: 0;
+  color: #3563E9;
+  font-weight: 700;
+  font-size: 22px;
+}
+.search-wrapper {
+  position: relative;
+  max-width: 420px;
   width: 100%;
 }
 
-/* Capsule shape */
-.ant-input-search .ant-input-group {
-  border-radius: 999px;
-  overflow: hidden;
-  background: #fff;
-}
-
-/* Input field */
-.ant-input-search .ant-input {
+.search-input {
+  width: 100%;
   height: 44px;
+  padding: 0 48px;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;
-  padding-left: 42px;   /* left search icon space */
-  padding-right: 56px;  /* right filter icon space */
+  border: 1px solid #e6efff;
+  outline: none;
   font-size: 14px;
-  color: #374151;
+  color: #4b5563;
   background: #fff;
 }
 
-/* Remove blue focus */
-.ant-input-search .ant-input:focus {
-  box-shadow: none;
-  border-color: #e5e7eb;
-}
-
-/* LEFT search icon */
-.ant-input-search .ant-input-prefix {
-  position: absolute;
-  left: 14px;
+.search-input::placeholder {
   color: #9ca3af;
-  font-size: 16px;
 }
 
-/* RIGHT button wrapper */
-.ant-input-search .ant-input-group-addon {
-  background: transparent;
-  border: none;
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
-/* RIGHT round icon button */
-.ant-input-search .ant-btn {
-  height: 36px;
-  width: 36px;
-  margin-right: 6px;
-  border-radius: 50%;
-  border: 1px solid #e5e7eb;
-  background: #fff;
+.search-icon.left {
+  left: 16px;
+}
+
+.search-icon.right {
+  right: 16px;
+}
+
+.search-icon img {
+  width: 18px;
+  height: 18px;
+}
+.header-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  cursor: pointer;
 }
 
-/* ❌ Hide default search icon */
-.ant-input-search .ant-btn .anticon-search {
-  display: none;
-}
-
-/* ✅ ADD filter/list icon using CSS */
-.ant-input-search .ant-btn::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M6 12h12M10 18h4' /%3E%3C/svg%3E")
-    no-repeat center;
-  background-size: 18px;
-}
-
-/* Hover effect */
-.ant-input-search .ant-btn:hover {
-  background: #f9fafb;
-}
 @media (max-width: 768px) {
-  .ant-input-search {
-    max-width: 100%;
+
+  .site-header {
+    height: auto;
+    padding: 16px 0;
   }
-}
+
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .header-icons {
+    width: 100%;
+    order: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-right-icons span {
+    display: none;
+  }
+
+  .header-right-icons .ant-avatar {
+    display: flex;
+  }
+
+  /* LOGO ROW */
+  .header-logo {
+    order: 2;
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .header-inner > a {
+    width: 100%;
+  }
+
+  /* SEARCH ROW */
+  .search-wrapper {
+    order: 3;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+
+  .search-input {
+    height: 44px;
+    font-size: 13px;
+    padding-right: 56px;
+    width: 78%;
+    border-radius: 11px;
+
+  }
+
+  .search-icon.right {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid #e6efff;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-icon.right img {
+    width: 18px;
+    height: 18px;
+  }
+} 

@@ -1,98 +1,67 @@
-import { Layout, Input, Badge, Avatar } from "antd";
+import { Layout, Badge, Avatar } from "antd";
 import {
   HeartOutlined,
   BellOutlined,
   SettingOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-
+import searchIcon from "../../assets/search-normal.png";
+import filterIcon from "../../assets/filter.png";
+import "./AppHeader.css";
+import { Link } from "react-router-dom";
 
 const { Header } = Layout;
-const { Search } = Input;
 
 const AppHeader = () => {
   return (
-    <Header
-      style={{
-        background: "#fff",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "0 24px",
-        height: 72,
-        position: "sticky",
-        top: 0,
-        zIndex: 1000,
-        borderBottom: "1px solid #f0f0f0",
-      }}
-    >
+    <Header className="site-header">
+      <div className="header-inner">
+     
       {/* LEFT - LOGO */}
-      <h2 style={{ margin: 0, color: "#1677ff", fontWeight: 700 }}>
-        MORENT
-      </h2>
+      <Link to="/">
+        <h2 className="header-logo">MORENT</h2>
+      </Link>
 
       {/* CENTER - SEARCH */}
-      <Search
-        placeholder="Search something here"
-        allowClear
-        style={{
-          maxWidth: 400,
-          width: "100%",
-          margin: "0 24px",
-        }}
-      />
+      <div className="search-wrapper">
+        <span className="search-icon left">
+          <img src={searchIcon} alt="search" />
+        </span>
 
-      {/* RIGHT - ICONS */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 16,
-        }}
-      >
-        <HeartOutlined style={{ fontSize: 20 }} />
-
-        <Badge dot>
-          <BellOutlined style={{ fontSize: 20 }} />
-        </Badge>
-
-        <SettingOutlined style={{ fontSize: 20 }} />
-
-        <Avatar
-          size={36}
-          icon={<UserOutlined />}
-          style={{ cursor: "pointer" }}
+        <input
+          type="text"
+          placeholder="Search something here"
+          className="search-input"
         />
+
+        <span className="search-icon right">
+          <img src={filterIcon} alt="filter" />
+        </span>
       </div>
+
+      {/* RIGHT ICONS */}
+      <div className="header-icons">
+        <div className="header-right-icons">
+          <span className="icon-box">
+            <HeartOutlined />
+          </span>
+
+          <span className="icon-box">
+            <Badge dot>
+              <BellOutlined />
+            </Badge>
+          </span>
+
+          <span className="icon-box">
+            <SettingOutlined />
+          </span>
+
+          <Avatar size={36} icon={<UserOutlined />} />
+        </div>
+      </div>
+     </div>
     </Header>
   );
 };
 
 export default AppHeader;
-
-// import { Layout } from "antd";
-
-// const { Header } = Layout;
-
-// const AppHeader = () => {
-//   return (
-//     <Header
-//       style={{
-//         height: 72,
-//         position: "fixed",
-//         top: 0,
-//         width: "100%",
-//         zIndex: 1000,
-//         background: "#fff",
-//         borderBottom: "1px solid #eee",
-//         display: "flex",
-//         alignItems: "center",
-//         padding: "0 40px",
-//       }}
-//     >
-//       <h2 style={{ color: "#3563E9" }}>MORENT</h2>
-//     </Header>
-//   );
-// };
-
-// export default AppHeader;

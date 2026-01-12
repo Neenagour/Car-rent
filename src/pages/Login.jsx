@@ -1,4 +1,3 @@
-// pages/Login.jsx
 import "./Login.css";
 
 const Login = () => {

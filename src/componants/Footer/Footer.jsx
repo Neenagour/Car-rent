@@ -1,29 +1,25 @@
-import { Layout, Row, Col } from 'antd';
-import"./Footer.css";
+import { Layout, Row, Col } from "antd";
+import "./Footer.css";
 
 const { Footer } = Layout;
 
 const AppFooter = () => {
   return (
-    <Footer style={{
-         background: "#fff",
-  padding: "20px 60px",
-  marginTop: 0 }}>
-      
+    <Footer className="site-footer">
+      <div className="footer-inner">
       {/* Top Section */}
       <Row gutter={[32, 32]}>
-        
         {/* Brand */}
-        <Col xs={24} md={8}>
-          <h2 style={{ color: '#1677ff', marginBottom: 10 }}>MORENT</h2>
-          <p style={{ color: '#777', fontSize: 14 }}>
+        <Col xs={24} sm={24} md={8} className="footer-brand">
+          <h2>MORENT</h2>
+          <p>
             Our vision is to provide convenience <br />
             and help increase your sales business.
           </p>
         </Col>
 
         {/* About */}
-        <Col xs={24} md={5}>
+        <Col xs={12} sm={12} md={5} className="footer-section">
           <h4>About</h4>
           <p>How it works</p>
           <p>Featured</p>
@@ -32,7 +28,7 @@ const AppFooter = () => {
         </Col>
 
         {/* Community */}
-        <Col xs={24} md={5}>
+        <Col xs={12} sm={12} md={5} className="footer-section">
           <h4>Community</h4>
           <p>Events</p>
           <p>Blog</p>
@@ -41,7 +37,7 @@ const AppFooter = () => {
         </Col>
 
         {/* Socials */}
-        <Col xs={24} md={5}>
+        <Col xs={12} sm={12} md={5} className="footer-section">
           <h4>Socials</h4>
           <p>Discord</p>
           <p>Instagram</p>
@@ -51,31 +47,20 @@ const AppFooter = () => {
       </Row>
 
       {/* Divider */}
-      <div
-        style={{
-          margin: '30px 0',
-          borderTop: '1px solid #eee'
-        }}
-      />
+      <div className="footer-divider" />
 
       {/* Bottom Section */}
-      <Row justify="space-between" align="middle">
+      <Row justify="space-between" align="middle" className="footer-bottom">
         <Col>
-          <p style={{ margin: 0, fontSize: 13 }}>
-            ©2025 MORENT. All rights reserved
-          </p>
+          <p>©2025 MORENT. All rights reserved</p>
         </Col>
 
-        <Col>
-          <span style={{ marginRight: 20, fontSize: 13 }}>
-            Privacy & Policy
-          </span>
-          <span style={{ fontSize: 13 }}>
-            Terms & Condition
-          </span>
+        <Col className="footer-links">
+          <span>Privacy & Policy</span>
+          <span>Terms & Condition</span>
         </Col>
       </Row>
-
+      </div>
     </Footer>
   );
 };

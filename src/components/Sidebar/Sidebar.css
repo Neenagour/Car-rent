@@ -1,0 +1,88 @@
+.sidebar {
+  width: 240px;
+  height: 700px;
+  background: #ffffff;
+  padding: 24px 20px;
+  border-right: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Logo */
+.logo {
+  color: #3563e9;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* Section title */
+.section-title {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 16px 0 8px;
+  letter-spacing: 1px;
+}
+
+/* menu reset */
+.custom-menu {
+  border: none;
+  background: transparent;
+}
+
+.custom-menu .ant-menu-item {
+  height: 44px;
+  line-height: 44px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  color: #7a7a7a;
+  font-size: 14px;
+}
+
+/* Icon */
+.custom-menu .ant-menu-item .anticon {
+  font-size: 16px;
+}
+
+/* Active */
+.custom-menu .ant-menu-item-selected {
+  background: #3563e9 !important;
+  color: #fff !important;
+}
+
+.custom-menu .ant-menu-item-selected .anticon {
+  color: #fff;
+}
+
+/* Hover */
+.custom-menu .ant-menu-item:hover {
+  background: #f5f7ff;
+  color: #3563e9;
+}
+
+/* Dark mode */
+.dark-mode {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8f9fb;
+  font-size: 14px;
+}
+
+.logout {
+  margin-top: 162px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #8a8a8a;
+  cursor: pointer;
+}
+
+.logout:hover {
+  color: #e63946;
+}

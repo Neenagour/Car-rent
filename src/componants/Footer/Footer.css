@@ -1,17 +1,105 @@
+/* ======================
+   FOOTER BASE
+====================== */
+
+.site-footer {
+  background: #fff;
+  padding: 0;
+  margin-top: 0;
+  border-top: 1px solid #eee;
+}
+
+/* CENTER CONTAINER */
+.footer-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* ======================
+   BRAND
+====================== */
+
+.footer-brand h2 {
+  color: #1677ff;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* ======================
+   SECTIONS
+====================== */
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+/* ======================
+   DIVIDER
+====================== */
+
+.footer-divider {
+  margin: 30px 0;
+  border-top: 1px solid #eee;
+}
+
+/* ======================
+   BOTTOM BAR
+====================== */
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.footer-links span {
+  font-size: 13px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* ======================
+   MOBILE RESPONSIVE
+====================== */
+
 @media (max-width: 768px) {
-  .ant-layout-footer {
-    padding: 20px !important;
+  .footer-inner {
+    padding: 24px 16px;
   }
 
-  .ant-layout-footer h4 {
-    margin-top: 16px;
+  .footer-brand {
+    margin-bottom: 24px;
   }
 
-  .ant-layout-footer p {
-    font-size: 13px;
+  .footer-section {
+    margin-bottom: 20px;
   }
 
-  .ant-layout-footer .ant-row {
-    text-align: left;
+  .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-links span {
+    margin-left: 0;
   }
 }

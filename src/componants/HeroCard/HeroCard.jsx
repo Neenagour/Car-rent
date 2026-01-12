@@ -4,13 +4,8 @@ import "./HeroCard.css";
 
 const Hero = ({ hero1, hero2 }) => {
   return (
-    <div style={{
-  width: "100%",
-  padding: "24px 28px",
-  marginBottom: 0,
-  marginTop: 0,  
-  height: "100%", 
-}}>
+ <div className="container-box">
+
       <Row gutter={[24, 24]}>
         <Col xs={24} md={12}>
           <div className="hero-card blue">

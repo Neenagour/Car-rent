@@ -134,7 +134,7 @@ export const carsData = [
     liked: false,
   },
   {
-  id: 1,  
+  id: 10,  
   name: "Koenigsegg",
   type: "Sport",
   image: "/img.png",
