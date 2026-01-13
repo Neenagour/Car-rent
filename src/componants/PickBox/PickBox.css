@@ -1,0 +1,23 @@
+.pick-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.pick-box h4 {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.pick-box b {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.pick-box p {
+  margin: 0;
+  font-size: 13px;
+  color: #90a3bf;
+}

@@ -1,0 +1,73 @@
+.sidebar-filter {
+  width: 280px;
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 24px;
+  border-right: 1px solid #e6e9f0;
+
+  /* optional but recommended */
+  position: sticky;
+  top: 0;
+}
+.sidebar-filter {
+  width: 280px;
+  flex-shrink: 0;
+  background: #fff;
+}
+
+
+/* Section title */
+.filter-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #90a3bf;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Checkbox group */
+/* sidebar base font */
+.sidebar-filter {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* checkbox group */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+/* checkbox text */
+.ant-checkbox-wrapper {
+  font-size: 14px;
+  color: #596780;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* section title */
+.filter-title {
+  font-size: 14px;
+  font-weight: 300;
+  color: #a4a5a7;
+  margin-bottom: 12px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* price text */
+.price-text {
+  font-size: 14px;
+  color: #596780;
+  margin-top: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+  .sidebar-filter {
+    display: none;
+  }
+}
+

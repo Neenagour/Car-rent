@@ -1,0 +1,48 @@
+.container-box {
+  max-width: 1300px;
+   padding: 13px 28px 0px 28px;
+  margin: 0 auto;   
+  height: 100%;
+}
+
+.hero-card {
+  height: auto;
+  min-height: 180px;     
+  border-radius: 5px;
+  padding: 20px;         
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Backgrounds */
+.hero-card.blue {
+  background: #5b9cff;
+}
+
+.hero-card.dark {
+  background: #3563e9;
+}
+
+/* IMAGE */
+.hero-card img {
+  width: 180px;          
+  max-width: 38%;
+  height: auto;
+
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-card.dark {
+    display: none;
+  }
+}

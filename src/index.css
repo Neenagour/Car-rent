@@ -1,68 +1,163 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  background-color: #F6F7F9;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+.ant-layout {
+  margin: 0;
+}
+
+.ant-layout-content {
+  padding: 0;
+}
+/* index.css */
+.auth-layout {
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.ant-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/* MAIN CENTER CONTAINER */
+
+.main-container {
+  max-width: 1280px;     
+  margin: 0 auto;       
+  padding: 0 24px;      
+  width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (max-width: 768px) {
+
+  /* COMMON */
+  .details-content,
+  .checkout-page {
+    padding: 16px;
   }
-  a:hover {
-    color: #747bff;
+
+  /* DETAILS PAGE */
+  .details-top {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .thumbs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .thumbs img {
+    width: 60px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CHECKOUT PAGE */
+  .checkout-page {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-right {
+    position: static;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .payment-grid,
+  .rental-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rent-btn {
+    width: 100%;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+/*  GLOBAL PAGE CONTAINE */
+
+.page-container {
+  width: 100%;
+  max-width: 1300px;   
+  margin: 0 auto;
+  padding: 0 24px;
+   min-height: calc(100vh - 140px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 0 16px;
+  }
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1600px) {
+  .page-container {
+    max-width: 1600px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .main-container {
+    padding: 0 16px;
+  }
+
+
+  /* DETAILS */
+  .details-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CHECKOUT */
+  .checkout-page {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .checkout-right {
+    height: auto;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .cars-wrapper {
+    max-width: 1600px;
+  }
+
+  .details-content {
+    padding: 40px 80px;
+  }
+
+  .checkout-page {
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }

@@ -40,3 +40,130 @@
 .read-the-docs {
   color: #888;
 }
+
+
+ /* COMMON */
+  .details-content,
+  .checkout-page {
+    padding: 16px;
+  }
+
+  /* DETAILS PAGE */
+  .details-top {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .thumbs {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .thumbs img {
+    width: 60px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CHECKOUT PAGE */
+  .checkout-page {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-right {
+    position: static;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .payment-grid,
+  .rental-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rent-btn {
+    width: 100%;
+  }
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* DETAILS */
+  .details-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CHECKOUT */
+  .checkout-page {
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .checkout-right {
+    height: auto;
+  }
+}
+@media (min-width: 1600px) {
+
+  /* HEADER */
+  .ant-layout-header {
+    padding: 0 80px !important;  
+    height: 88px;
+  }
+
+  .header-logo {
+    font-size: 26px;
+    color: red;
+  }
+
+  .search-wrapper {
+    max-width: 520px;             
+  }
+
+  .search-input {
+    height: 52px;
+    font-size: 16px;
+  }
+
+  .search-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header-right-icons {
+    gap: 24px;
+  }
+
+  .icon-box svg {
+    font-size: 22px;
+  }
+
+  .ant-avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* FOOTER */
+  .app-footer {
+    padding: 40px 120px;
+  }
+
+  .footer-brand h2 {
+    font-size: 24px;
+  }
+
+  .footer-brand p,
+  .footer-section p,
+  .footer-links span {
+    font-size: 15px;
+  }
+}

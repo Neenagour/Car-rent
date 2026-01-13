@@ -1,0 +1,160 @@
+.details-layout {
+  display: flex;
+  background: #f6f7f9;
+}
+.details-content {
+  flex: 1;
+  padding: 30px 40px;
+}
+/* TOP */
+.details-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+}
+
+.details-right {
+  min-height: 280px;
+  padding: 20px;
+}
+
+/* LEFT BLUE */
+.details-left {
+  background: linear-gradient(135deg, #3563e9, #6c8cff);
+  color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  min-height: 280px;
+}
+
+.left-desc {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.main-car-img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  margin: 16px 0;
+}
+
+.thumbs {
+  display: flex;
+  gap: 12px;
+}
+
+.thumbs img {
+  width: 70px;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* RIGHT */
+.details-right {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-row {
+  color: #90a3bf;
+  margin: 10px 0;
+}
+
+.desc {
+  color: #596780;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.specs span {
+  font-weight: 600;
+}
+
+/* PRICE */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.old-price {
+  color: #90a3bf;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+/* REVIEWS */
+.reviews {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  margin-top: 40px;
+}
+
+.count {
+  background: #3563e9;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 50px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.view {
+  color: #3563e9;
+  cursor: pointer;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  /* TOP section */
+  .details-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* BLUE CARD → FIRST */
+  .details-left {
+    order: 1;
+  }
+
+  /* DETAILS CARD → SECOND */
+  .details-right {
+    order: 2;
+  }
+
+  /* REVIEWS → THIRD */
+  .reviews {
+    order: 3;
+    margin-top: 20px;
+  }
+}
